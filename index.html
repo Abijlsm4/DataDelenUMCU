@@ -49,7 +49,7 @@
         function getJson(filePath, callback) {
             fetch(filePath, {
                 mode: "no-cors"
-            }
+            })
                .then(async response => {
                 callback(await response.json())
             });
