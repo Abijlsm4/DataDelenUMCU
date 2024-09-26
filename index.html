@@ -47,7 +47,9 @@
     </div>
     <script>
         function getJson(filePath, callback) {
-            fetch(filePath)
+            fetch(filePath), {
+                mode: "no-cors"
+            }
                .then(async response => {
                 callback(await response.json())
             });
